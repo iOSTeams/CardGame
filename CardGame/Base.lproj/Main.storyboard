@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-LZ-rCf" userLabel="Card2">
+                                <rect key="frame" x="400" y="210" width="100" height="180"/>
+                                <color key="backgroundColor" red="0.31036409269999998" green="1" blue="0.31682193330000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="E2X-1d-CHM"/>
+                                    <constraint firstAttribute="height" constant="180" id="TO8-Z3-kg3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Umq-si-79t" userLabel="Card1">
+                                <rect key="frame" x="100" y="210" width="100" height="180"/>
+                                <color key="backgroundColor" red="0.31036409269999998" green="1" blue="0.31682193330000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="GTh-sj-rx0"/>
+                                    <constraint firstAttribute="width" constant="100" id="orY-18-hHh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-FP-Rdc" userLabel="Play">
+                                <rect key="frame" x="277" y="0.0" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Umq-si-79t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="1Jb-td-Cdo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S0y-FP-Rdc" secondAttribute="bottom" constant="100" id="8kL-ad-hDQ"/>
+                            <constraint firstItem="Umq-si-79t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LtA-zA-5n7"/>
+                            <constraint firstAttribute="trailing" secondItem="7BK-LZ-rCf" secondAttribute="trailing" constant="50" id="NDo-E0-U6t"/>
+                            <constraint firstAttribute="trailing" secondItem="7BK-LZ-rCf" secondAttribute="trailing" constant="100" id="VPk-7w-bAm"/>
+                            <constraint firstAttribute="trailing" secondItem="7BK-LZ-rCf" secondAttribute="trailing" constant="50" id="aHK-cQ-5eP"/>
+                            <constraint firstItem="Umq-si-79t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="ajp-2I-Yzw"/>
+                            <constraint firstItem="S0y-FP-Rdc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eiW-CF-zJE"/>
+                            <constraint firstItem="7BK-LZ-rCf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fVe-Ho-drI"/>
+                            <constraint firstItem="7BK-LZ-rCf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hHb-hg-HQn"/>
+                            <constraint firstItem="S0y-FP-Rdc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qkO-mg-EbQ"/>
+                            <constraint firstItem="Umq-si-79t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="xGE-Kc-Hbg"/>
+                            <constraint firstItem="S0y-FP-Rdc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzs-cF-CFI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ajp-2I-Yzw"/>
+                                <exclude reference="xGE-Kc-Hbg"/>
+                                <exclude reference="NDo-E0-U6t"/>
+                                <exclude reference="aHK-cQ-5eP"/>
+                                <exclude reference="hHb-hg-HQn"/>
+                                <exclude reference="qkO-mg-EbQ"/>
+                                <exclude reference="zzs-cF-CFI"/>
+                                <exclude reference="8kL-ad-hDQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="ajp-2I-Yzw"/>
+                                <include reference="qkO-mg-EbQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="xGE-Kc-Hbg"/>
+                                <include reference="NDo-E0-U6t"/>
+                                <include reference="aHK-cQ-5eP"/>
+                                <include reference="hHb-hg-HQn"/>
+                                <exclude reference="eiW-CF-zJE"/>
+                                <include reference="zzs-cF-CFI"/>
+                                <include reference="8kL-ad-hDQ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="Card1ImageView" destination="Umq-si-79t" id="idY-mT-fLm"/>
+                        <outlet property="Card2ImageView" destination="7BK-LZ-rCf" id="Cfe-Hw-FWV"/>
+                        <outlet property="PlayUIButton" destination="S0y-FP-Rdc" id="2Mm-pc-EdW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
