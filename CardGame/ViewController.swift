@@ -25,20 +25,9 @@ class ViewController: UIViewController {
 
     @IBAction func roundUIButtonTapped(sender: UIButton) {
         
-        let one = "hello"
+        secondCardView.image = UIImage(named: "card7")
+            
         
-        let two = "bye"
-        
-        if (self.roundUIButton.titleLabel != one) {
-                    self.roundUIButton.setTitle(two, forState: UIControlState.Normal)
-            self.firstCardView.addMotionEffect(<#T##effect: UIMotionEffect##UIMotionEffect#>)
-            
-        }
-        else if (self.roundUIButton.titleLabel == two) {
-            
-            self.roundUIButton.setTitle(one, forState: UIControlState.Normal)
-            
-        }
 
     }
 
