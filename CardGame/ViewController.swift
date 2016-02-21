@@ -24,10 +24,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func roundUIButtonTapped(sender: UIButton) {
+        let firstRandomNumber = arc4random_uniform(12)+2
+        let firstCardString:String = String(format:"card%i", firstRandomNumber)
         
-        secondCardView.image = UIImage(named: "card7")
+        let secondRandomNumber = arc4random_uniform(12)+2
+        let secondCardString: String = String(format: "card%i", secondRandomNumber)
+
+
+        firstCardView.image = UIImage(named: firstCardString)
+        
             
-        
+        secondCardView.image = UIImage(named: secondCardString)
 
     }
 
