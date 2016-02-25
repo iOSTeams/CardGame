@@ -291,6 +291,7 @@
 				31E5DA6E1C799E7100B8334D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

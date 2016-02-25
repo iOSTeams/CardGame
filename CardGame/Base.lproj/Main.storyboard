@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -125,18 +125,52 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBe-fp-t4B" userLabel="SecondScoreLabel">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaX-Cl-XgS" userLabel="FirstScoreLabel">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ij2-Ui-NJ1"/>
+                                    <constraint firstAttribute="height" constant="100" id="znX-pf-cn3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ij2-Ui-NJ1"/>
+                                        <exclude reference="znX-pf-cn3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ij2-Ui-NJ1"/>
+                                        <include reference="znX-pf-cn3"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UaX-Cl-XgS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Pr-dd-WHD"/>
+                            <constraint firstItem="YBe-fp-t4B" firstAttribute="width" secondItem="UaX-Cl-XgS" secondAttribute="width" id="4zX-dh-qRZ"/>
+                            <constraint firstItem="YBe-fp-t4B" firstAttribute="height" secondItem="UaX-Cl-XgS" secondAttribute="height" id="Egb-Rr-R9p"/>
                             <constraint firstAttribute="bottom" secondItem="gYY-Pi-fu5" secondAttribute="bottom" id="NUV-67-CcG"/>
                             <constraint firstAttribute="trailing" secondItem="gYY-Pi-fu5" secondAttribute="trailing" id="PNT-Ic-Udc"/>
                             <constraint firstItem="fmC-pD-Po3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V6z-u8-AJ6"/>
                             <constraint firstItem="gYY-Pi-fu5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XgL-wW-UUv"/>
                             <constraint firstItem="qUI-rf-kaJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YVF-h0-Ejf"/>
+                            <constraint firstAttribute="trailing" secondItem="YBe-fp-t4B" secondAttribute="trailing" id="ac8-k4-FqF"/>
                             <constraint firstAttribute="trailing" secondItem="fmC-pD-Po3" secondAttribute="trailing" id="b2R-4t-Uea"/>
+                            <constraint firstItem="YBe-fp-t4B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dWm-aX-96x"/>
                             <constraint firstItem="fmC-pD-Po3" firstAttribute="top" secondItem="qUI-rf-kaJ" secondAttribute="bottom" id="iJZ-GI-WQP"/>
                             <constraint firstItem="qUI-rf-kaJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nBP-8p-BWq"/>
                             <constraint firstItem="gYY-Pi-fu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rdH-0q-Y15"/>
+                            <constraint firstItem="UaX-Cl-XgS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uk2-P7-nTB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fmC-pD-Po3" secondAttribute="bottom" id="zBT-dO-PnI"/>
                         </constraints>
                         <variation key="default">
@@ -144,14 +178,22 @@
                                 <exclude reference="gYY-Pi-fu5"/>
                                 <exclude reference="qUI-rf-kaJ"/>
                                 <exclude reference="fmC-pD-Po3"/>
+                                <exclude reference="YBe-fp-t4B"/>
+                                <exclude reference="UaX-Cl-XgS"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="NUV-67-CcG"/>
                                 <exclude reference="PNT-Ic-Udc"/>
                                 <exclude reference="XgL-wW-UUv"/>
                                 <exclude reference="rdH-0q-Y15"/>
+                                <exclude reference="2Pr-dd-WHD"/>
+                                <exclude reference="uk2-P7-nTB"/>
                                 <exclude reference="YVF-h0-Ejf"/>
                                 <exclude reference="nBP-8p-BWq"/>
+                                <exclude reference="4zX-dh-qRZ"/>
+                                <exclude reference="Egb-Rr-R9p"/>
+                                <exclude reference="ac8-k4-FqF"/>
+                                <exclude reference="dWm-aX-96x"/>
                                 <exclude reference="V6z-u8-AJ6"/>
                                 <exclude reference="b2R-4t-Uea"/>
                                 <exclude reference="iJZ-GI-WQP"/>
@@ -163,14 +205,22 @@
                                 <include reference="gYY-Pi-fu5"/>
                                 <include reference="qUI-rf-kaJ"/>
                                 <include reference="fmC-pD-Po3"/>
+                                <include reference="YBe-fp-t4B"/>
+                                <include reference="UaX-Cl-XgS"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="NUV-67-CcG"/>
                                 <include reference="PNT-Ic-Udc"/>
                                 <include reference="XgL-wW-UUv"/>
                                 <include reference="rdH-0q-Y15"/>
+                                <include reference="2Pr-dd-WHD"/>
+                                <include reference="uk2-P7-nTB"/>
                                 <include reference="YVF-h0-Ejf"/>
                                 <include reference="nBP-8p-BWq"/>
+                                <include reference="4zX-dh-qRZ"/>
+                                <include reference="Egb-Rr-R9p"/>
+                                <include reference="ac8-k4-FqF"/>
+                                <include reference="dWm-aX-96x"/>
                                 <include reference="V6z-u8-AJ6"/>
                                 <include reference="b2R-4t-Uea"/>
                                 <include reference="iJZ-GI-WQP"/>
