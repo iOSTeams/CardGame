@@ -11,9 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     var score = 0
-    
     var score2 = 0
+    
+    //Score of total wins 
+    var masterScore = 0
+    var masterScore2 = 0
 
+    @IBOutlet weak var notificationLabel: UILabel!
     @IBOutlet weak var secondScoreLabel: UILabel!
     @IBOutlet weak var firstScoreLabel: UILabel!
     @IBOutlet weak var roundUIButton: UIButton!
@@ -30,6 +34,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func roundUIButtonTapped(sender: UIButton) {
+        
+        notificationLabel.text=String("")
         
         // Randomize a number for the first imageview
         let firstRandomNumber = arc4random_uniform(12)+2
@@ -54,25 +60,38 @@ class ViewController: UIViewController {
     
         
         if ( firstRandomNumber > secondRandomNumber){
-            score = score + 1
+            score++
             firstScoreLabel.text=String(score)
-            
-            
         }
         
         else if(firstRandomNumber < secondRandomNumber){
-            score2 = score2 + 1
+            score2++
             secondScoreLabel.text=String(score2)
         }
-        else {
-           
+            
+        else if(firstRandomNumber == secondRandomNumber && score == score2){
+                notificationLabel.text=String("Keep Going")
+            }
+        
+        if(firstRandomNumber == secondRandomNumber){
+            
+            if (score > score2){
+                notificationLabel.text=String("Player 1 Won")
+                masterScore++
+            }
+            else {
+                notificationLabel.text=String("Player 2 Won")
+                masterScore++
+            }
             score=score-score
             score2=score2-score2
             firstScoreLabel.text=String(score)
             secondScoreLabel.text=String(score2)
         }
-
+        
     }
 
 }
+
+
 
