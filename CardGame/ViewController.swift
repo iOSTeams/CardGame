@@ -46,8 +46,19 @@ class ViewController: UIViewController {
         secondCardView.image = UIImage(named: secondCardString)
         
         //Add points, two numbers one on each side, if a card is bigger than the other then points++
+        var score = 0
+        var score2= 0
         
+        if ( firstRandomNumber > secondRandomNumber){
+            score++
+            firstScoreLabel.text=score
+            
+        }
         
+        else {
+            score2++
+            secondScoreLabel.text=score2
+        }
 
     }
 
