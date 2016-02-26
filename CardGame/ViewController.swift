@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var secondScoreLabel: UILabel!
+    @IBOutlet weak var firstScoreLabel: UILabel!
     @IBOutlet weak var roundUIButton: UIButton!
     @IBOutlet weak var secondCardView: UIImageView!
     @IBOutlet weak var firstCardView: UIImageView!
@@ -44,6 +46,8 @@ class ViewController: UIViewController {
         secondCardView.image = UIImage(named: secondCardString)
         
         //Add points, two numbers one on each side, if a card is bigger than the other then points++
+        
+        
 
     }
 

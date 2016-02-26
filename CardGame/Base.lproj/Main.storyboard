@@ -182,14 +182,9 @@
                                 <exclude reference="UaX-Cl-XgS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="NUV-67-CcG"/>
-                                <exclude reference="PNT-Ic-Udc"/>
-                                <exclude reference="XgL-wW-UUv"/>
-                                <exclude reference="rdH-0q-Y15"/>
+                                <exclude reference="zBT-dO-PnI"/>
                                 <exclude reference="2Pr-dd-WHD"/>
                                 <exclude reference="uk2-P7-nTB"/>
-                                <exclude reference="YVF-h0-Ejf"/>
-                                <exclude reference="nBP-8p-BWq"/>
                                 <exclude reference="4zX-dh-qRZ"/>
                                 <exclude reference="Egb-Rr-R9p"/>
                                 <exclude reference="ac8-k4-FqF"/>
@@ -197,7 +192,12 @@
                                 <exclude reference="V6z-u8-AJ6"/>
                                 <exclude reference="b2R-4t-Uea"/>
                                 <exclude reference="iJZ-GI-WQP"/>
-                                <exclude reference="zBT-dO-PnI"/>
+                                <exclude reference="NUV-67-CcG"/>
+                                <exclude reference="PNT-Ic-Udc"/>
+                                <exclude reference="XgL-wW-UUv"/>
+                                <exclude reference="rdH-0q-Y15"/>
+                                <exclude reference="YVF-h0-Ejf"/>
+                                <exclude reference="nBP-8p-BWq"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -209,14 +209,9 @@
                                 <include reference="UaX-Cl-XgS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="NUV-67-CcG"/>
-                                <include reference="PNT-Ic-Udc"/>
-                                <include reference="XgL-wW-UUv"/>
-                                <include reference="rdH-0q-Y15"/>
+                                <include reference="zBT-dO-PnI"/>
                                 <include reference="2Pr-dd-WHD"/>
                                 <include reference="uk2-P7-nTB"/>
-                                <include reference="YVF-h0-Ejf"/>
-                                <include reference="nBP-8p-BWq"/>
                                 <include reference="4zX-dh-qRZ"/>
                                 <include reference="Egb-Rr-R9p"/>
                                 <include reference="ac8-k4-FqF"/>
@@ -224,14 +219,21 @@
                                 <include reference="V6z-u8-AJ6"/>
                                 <include reference="b2R-4t-Uea"/>
                                 <include reference="iJZ-GI-WQP"/>
-                                <include reference="zBT-dO-PnI"/>
+                                <include reference="NUV-67-CcG"/>
+                                <include reference="PNT-Ic-Udc"/>
+                                <include reference="XgL-wW-UUv"/>
+                                <include reference="rdH-0q-Y15"/>
+                                <include reference="YVF-h0-Ejf"/>
+                                <include reference="nBP-8p-BWq"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="firstCardView" destination="Ile-I5-bWj" id="qgJ-79-TI9"/>
+                        <outlet property="firstScoreLabel" destination="UaX-Cl-XgS" id="WSJ-sc-j5R"/>
                         <outlet property="roundUIButton" destination="F27-vy-k6w" id="heW-DZ-tHM"/>
                         <outlet property="secondCardView" destination="NaY-tA-5qT" id="eHe-XP-wCs"/>
+                        <outlet property="secondScoreLabel" destination="YBe-fp-t4B" id="iAo-IZ-s5N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
