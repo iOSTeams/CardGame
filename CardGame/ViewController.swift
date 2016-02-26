@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var score = 0
+    
+    var score2 = 0
+
     @IBOutlet weak var secondScoreLabel: UILabel!
     @IBOutlet weak var firstScoreLabel: UILabel!
     @IBOutlet weak var roundUIButton: UIButton!
@@ -46,18 +50,26 @@ class ViewController: UIViewController {
         secondCardView.image = UIImage(named: secondCardString)
         
         //Add points, two numbers one on each side, if a card is bigger than the other then points++
-        var score = 0
-        var score2= 0
+        
+    
         
         if ( firstRandomNumber > secondRandomNumber){
-            score++
-            firstScoreLabel.text=score
+            score = score + 1
+            firstScoreLabel.text=String(score)
+            
             
         }
         
+        else if(firstRandomNumber < secondRandomNumber){
+            score2 = score2 + 1
+            secondScoreLabel.text=String(score2)
+        }
         else {
-            score2++
-            secondScoreLabel.text=score2
+           
+            score=score-score
+            score2=score2-score2
+            firstScoreLabel.text=String(score)
+            secondScoreLabel.text=String(score2)
         }
 
     }
